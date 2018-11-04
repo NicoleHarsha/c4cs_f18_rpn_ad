@@ -1,8 +1,5 @@
-config.serialize
-{
-	language: python
-	python:
-		- 3.5
-	script:
-		- make test
-}
+language: python
+python:
+	- 3.5
+script:
+	- make test
