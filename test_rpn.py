@@ -25,3 +25,7 @@ class TestBasics(unittest.TestCase):
 	def test_expo(self):
 		result = rpn.calculate("2 2 ^")
 		self.assertEqual(4, result)		
+
+	def test_mod(self):
+		result = rpn.calculate("4 2 %")
+		self.assertEqual(0, result)
