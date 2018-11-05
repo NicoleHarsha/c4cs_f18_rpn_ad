@@ -1,8 +1,12 @@
 #!/usr/bin/env python3
+import readline
+import sys
+from termcolor import colored 
+
 def calculate(arg):
 	stack = []
+	
 	tokens = arg.split()
-
 	for token in tokens:
 		try:
 			stack.append(int(token))
@@ -30,7 +34,10 @@ def main():
 	while True:
 		try:
 			result = calculate(input("rpn calc> "))
-			print(result)
+			if result >= 0:
+				print(colored(result, 'green'))
+			elif result < 0:
+				print(colored(result, 'red'))
 		except ValueError:
 			pass
 
