@@ -4,5 +4,6 @@ install:
 - pip install coveralls
 - pip install termcolor
 - pip install -U pytest
-script: make test
-after-success: pytest
+script: 
+- make test
+- pytest
